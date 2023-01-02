@@ -1,4 +1,4 @@
-function randomgString(length) {
+function randomString(length) {
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
@@ -8,7 +8,7 @@ function randomgString(length) {
     return result;
   }
 
-module.exports = randomgString
+module.exports = randomString
   
   
 
