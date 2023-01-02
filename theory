@@ -1,0 +1,4 @@
+Otentikasi adalah sistem untuk mengidentifikasi apakah request yang dilakukan adalah otentik dari user / manusia / human yang dimaksudkan. Bukan dari yang tidak seharusnya, misal robot. Captcha bagian dari otorisasi, bukan otentikasi
+Otorisasi: sistem untuk mengidentifikasi request yang dilakukan sesuai dengan peruntukannya. Misal: admin, customer. Membagi-bagi. Otentikasi dulu baru otorisasi. Kamu manusia dulu baru bisa dibagi-bagi.
+JWT: sistem generate dan verifikasi token untuk web.
+Multer: node package untuk mengelola data multipart / form data. Biasa digunakan untuk upload files.
