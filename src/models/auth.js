@@ -20,7 +20,7 @@ models.login = async (email) => {
     }
 }
 
-models.searchUserCOde = async (userCode) => {
+models.searchUserCode = async (userCode) => {
     try {        
        result = await db.query(`SELECT * FROM users WHERE verifyCode = $1`, [userCode])
        return result.rows

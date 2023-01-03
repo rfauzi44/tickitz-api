@@ -16,7 +16,7 @@ auth.register = async(req, res) => {
       to: `"${email}"`,
       subject: "Email verification",
       text: "Plaintext version of the message",
-      html: `<p>Click this <a href="${process.env.BASE_URL}/auth/verify/${verifyCode}" target="_blank">link</a></p>`
+      html: `<p>To verify click this <a href="${process.env.BASE_URL}/auth/verify/${verifyCode}" target="_blank">link</a></p>`
     }
     await transporter.sendMail(message)
     
@@ -57,7 +57,7 @@ auth.verify = async(req, res) => {
   try {
     
     const userCode = req.params.userCode
-    const result = await models.searchUserCOde(userCode)
+    const result = await models.searchUserCode(userCode)
     if (result.length > 0) {
       await models.updateVerify(result[0].user_id)
       return response(res, 200, "You're verified, please log-in again")
