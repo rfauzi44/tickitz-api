@@ -13,7 +13,7 @@ models.getBooking = async () => {
 
 models.getBookingUsers = async (user_id) => {
     try {
-       result = await db.query(`SELECT booking_id, title, price, date, time, studio.name AS studio, location, seat  time FROM booking
+       result = await db.query(`SELECT booking_id, title, price, date, time, studio.name AS studio, location, seat, time FROM booking
        INNER JOIN users ON users.user_id = booking.user_id
        INNER JOIN schedule ON schedule.schedule_id = booking.schedule_id
        INNER JOIN movie ON schedule.movie_id = movie.movie_id
