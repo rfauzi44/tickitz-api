@@ -19,7 +19,6 @@ auth.register = async(req, res) => {
       html: `<p>To verify click this <a href="${process.env.BASE_URL}/auth/verify/${verifyCode}" target="_blank">link</a></p>`
     }
     await transporter.sendMail(message)
-    
     const saltRounds = 10
     const hash = await bcrypt.hashSync(password, saltRounds)
     await models.register(name, email, hash, verifyCode)

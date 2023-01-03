@@ -25,7 +25,6 @@ ctrl.getBookingUsers = async (req, res) => {
 ctrl.addBooking = async (req, res) => {
     try {
         const activeuser = req.userData.user_id
-        console.log(req)
         const {schedule_id, seat} = req.body
         const result = await models.addBooking({user_id: activeuser, schedule_id, seat})
         return response(res, 200, result)
