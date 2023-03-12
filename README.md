@@ -18,33 +18,33 @@ Tickitz is a movie ticketing app designed for customers to book tickets and for 
 - Sorting, Filtering, Searching, and Pagination
 
 ## 💻 Built with
--   [NodeJS](https://github.com/nodejs/node): for the server side scripting
--   [Express JS](https://github.com/expressjs/express): for handling HTTP requests and responses
--   [JWT](https://github.com/auth0/node-jsonwebtoken): for authentication and authorization
--   [Postgres](https://github.com/postgres/postgres): for DBMS
--   [Sendinblue](https://github.com/sendinblue/APIv3-nodejs-library): for sending emails
+-   [NodeJS](https://github.com/nodejs/node) for the server side scripting
+-   [Express JS](https://github.com/expressjs/express) for handling HTTP requests and responses
+-   [JWT](https://github.com/auth0/node-jsonwebtoken) for authentication and authorization
+-   [Postgres](https://github.com/postgres/postgres) for DBMS
+-   [Sendinblue](https://github.com/sendinblue/APIv3-nodejs-library) for sending emails
 
 ## 🛠️ Installation Steps
 
-Clone the project
+1. Clone the project
 
 ```bash
 git clone https://github.com/rfauzi44/tickitz-api.git
 ```
 
-Go to the project directory
+2. Go to the project directory
 
 ```bash
 cd my-project
 ```
 
-Install dependencies
+3. Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the server
+4. Start the server
 
 ```bash
 npm run dev
