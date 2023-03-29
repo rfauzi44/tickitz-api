@@ -16,7 +16,7 @@ auth.register = async(req, res) => {
       to: `"${email}"`,
       subject: "Email verification",
       text: "Plaintext version of the message",
-      html: `<p>To verify click this <a href="${process.env.BASE_URL}/auth/verify/${verifyCode}" target="_blank">link</a></p>`
+      html: `<p>To verify click this <a href="${process.env.BASE_URL}:${process.env.APP_PORT}/auth/verify/${verifyCode}" target="_blank">link</a></p>`
     }
     await transporter.sendMail(message)
     const saltRounds = 10
@@ -34,11 +34,11 @@ auth.login = async(req, res) => {
     const result = await models.login(email)
     const user = result[0]
     if(!user) {
-      return response(res, 401, "user wrong")
+      return response(res, 401, "email not registered")
     }
     const compared = await bcrypt.compareSync(password, user.password)
     if(!compared) {
-      return response(res, 401, "password wrong")
+      return response(res, 401, "wrong password")
     }
     delete user.password
     const token = `Bearer ${jwt.sign(user, process.env.JWT_SECRETS, {expiresIn: '1h'})}`
