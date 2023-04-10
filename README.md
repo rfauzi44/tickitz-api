@@ -1,5 +1,5 @@
 # Tickitz
-Tickitz is a movie ticketing app designed for customers to book tickets and admins to post movie shows and schedules. This RESTful API built with ExpressJS and PostgreSQL.
+Tickitz is a movie ticketing app designed for customers to book tickets and admins to post movies and schedules. This RESTful API built with ExpressJS and PostgreSQL.
 
 ## 🔥 Showcase
 - Web Screenshot
